@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace OrmonPLC_Comunication
 {
-    public class Class1
+    interface IReadWriteOrmonPLC
     {
+        bool Read();
+        bool Write();
+         
     }
 }
