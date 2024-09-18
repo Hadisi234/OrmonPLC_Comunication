@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace OrmonPLC_Comunication.CIP
 {
+    
     public class OrmonPLC_CIP
     {
         TcpClient client;

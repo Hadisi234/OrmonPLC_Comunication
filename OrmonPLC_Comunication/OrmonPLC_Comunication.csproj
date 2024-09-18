@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CIP\OrmonPLC_CIP.cs" />
+    <Compile Include="Fins\OrmonPLC_FinsTCP.cs" />
     <Compile Include="IReadWriteOrmonPLC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
