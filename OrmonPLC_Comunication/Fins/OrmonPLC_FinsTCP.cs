@@ -56,6 +56,7 @@ namespace OrmonPLC_Comunication.Fins
         string targetIP;
         int targetPort;
         private bool connected;
+
         /// <summary>
         /// true 为成功连接
         /// </summary>
@@ -80,26 +81,26 @@ namespace OrmonPLC_Comunication.Fins
             }
             targetIP = ip;
             targetPort = port;
-            tcpClient = new TcpClient(ip, port);
-
         }
 
-
         /// <summary>
-        /// 提供过构造，提供过IP和Port,可以直接连接
+        /// 使用TCP短连接，检测IP和端口是否能连接上
         /// </summary>
         /// <returns></returns>
         public bool Connect()
         {
+            TcpClient tcpClient = new TcpClient(); 
             tcpClient.Connect(targetIP, targetPort);
             if (tcpClient.Connected)
             {
                 connected = true;
+                tcpClient.Close();
                 return true;
             }
             else
             {
                 connected = false;
+                tcpClient.Close();
                 return false;
             }
         }
