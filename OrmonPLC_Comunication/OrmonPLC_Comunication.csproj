@@ -46,5 +46,13 @@
     <Compile Include="IReadWriteOrmonPLC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="通信协议笔记文件夹\通信协议知识点.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="通信协议笔记文件夹\通信协议知识点.assets\image-20240919113605014.png" />
+    <Content Include="通信协议笔记文件夹\通信协议知识点.assets\image-20240919132533945.png" />
+    <Content Include="通信协议笔记文件夹\通信协议知识点.assets\image-20240919135429952.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
