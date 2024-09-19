@@ -29,9 +29,9 @@ namespace OrmonPLC_Comunication.Fins
         /// </summary>
         byte[] FinsFrame;
 
-        public byte[] GetBytes()
+        public byte[] GetBytes(int byteNumber)
         {
-            byte[] bytes = new byte[4096];
+            byte[] bytes = new byte[byteNumber];
             if (Header == null || Length == null || Command == null || ErrorCode == null || FinsFrame == null)
             {
                 throw new Exception("报文拼接失败！存在有报文是空值");
@@ -39,24 +39,20 @@ namespace OrmonPLC_Comunication.Fins
             int index = 0;
             Header.CopyTo(bytes, index);
             index += Header.Length - 1;
-            Length.CopyTo(bytes,index );
+            Length.CopyTo(bytes, index);
             index += Length.Length - 1;
             Command.CopyTo(bytes, index);
             index += Command.Length - 1;
             ErrorCode.CopyTo(bytes, index);
             index += ErrorCode.Length - 1;
-            FinsFrame.CopyTo(bytes, index);
-            index += FinsFrame.Length - 1;
-            if(index<)
+            FinsFrame.CopyTo(bytes, index);//如果内容超出数组长度会抛出异常的
+            return bytes；
         }
 
     }
 
     public class OrmonPLC_FinsTCP
     {
-        FinsMessage finsMessage;
-        byte[] SendToPLC;
-        TcpClient tcpClient;
         string targetIP;
         int targetPort;
         private bool connected;
@@ -70,6 +66,7 @@ namespace OrmonPLC_Comunication.Fins
                 return connected;
             }
         }
+
         public OrmonPLC_FinsTCP(string ip, int port)
         {
             IPAddress ipaddress;
@@ -84,7 +81,10 @@ namespace OrmonPLC_Comunication.Fins
             targetIP = ip;
             targetPort = port;
             tcpClient = new TcpClient(ip, port);
+
         }
+
+
         /// <summary>
         /// 提供过构造，提供过IP和Port,可以直接连接
         /// </summary>
