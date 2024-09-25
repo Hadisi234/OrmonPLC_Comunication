@@ -1,0 +1,33 @@
+﻿<Window x:Class="编码转换器.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:编码转换器"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="320" Width="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="5">
+            <TextBlock Text="输入区"></TextBlock>
+            <TextBlock Text="字节数组（需要以英文逗号分割)" AllowDrop="True" TextWrapping="WrapWithOverflow"></TextBlock>
+            <TextBlock Text="编码方式"/>
+
+            <RadioButton x:Name ="ASII" Content="ASII码" IsThreeState="False" Click="RadioButton_Click"/>
+            <RadioButton x:Name ="UTF8" Content="UTF8" IsThreeState="False" Click="RadioButton_Click"/>
+            <RadioButton x:Name ="Unicode" Content="Unicode" IsThreeState="False" Click="RadioButton_Click"/>
+
+            <RichTextBox x:Name="tb_Send" xml:space="preserve" Height="150" Margin="5"></RichTextBox>
+            <!--xml:lang=""指定语言-->
+            <Button x:Name="translate" Content="翻译" Click="translate_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="5">
+            <TextBlock Text="输出区"></TextBlock>
+            <TextBox x:Name="tb_Receive" xml:space="preserve" Height="230" Margin="5"></TextBox>
+            
+        </StackPanel>
+    </Grid>
+</Window>

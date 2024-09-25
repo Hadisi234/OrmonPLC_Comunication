@@ -5,6 +5,10 @@ VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrmonPLC_Comunication", "OrmonPLC_Comunication\OrmonPLC_Comunication.csproj", "{8F6B396A-55E1-4CB5-93F1-F9FE622F3C9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrmonPLCView", "OrmonPLCView\OrmonPLCView.csproj", "{0DDBC947-1859-4EC7-B029-4D1BC49C4150}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "编码转换器", "编码转换器\编码转换器.csproj", "{32859637-4C65-472F-993C-E8B65E0A56E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{8F6B396A-55E1-4CB5-93F1-F9FE622F3C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F6B396A-55E1-4CB5-93F1-F9FE622F3C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F6B396A-55E1-4CB5-93F1-F9FE622F3C9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DDBC947-1859-4EC7-B029-4D1BC49C4150}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DDBC947-1859-4EC7-B029-4D1BC49C4150}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DDBC947-1859-4EC7-B029-4D1BC49C4150}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DDBC947-1859-4EC7-B029-4D1BC49C4150}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32859637-4C65-472F-993C-E8B65E0A56E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32859637-4C65-472F-993C-E8B65E0A56E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32859637-4C65-472F-993C-E8B65E0A56E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32859637-4C65-472F-993C-E8B65E0A56E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

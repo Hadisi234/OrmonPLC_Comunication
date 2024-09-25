@@ -46,7 +46,7 @@ namespace OrmonPLC_Comunication.Fins
             ErrorCode.CopyTo(bytes, index);
             index += ErrorCode.Length - 1;
             FinsFrame.CopyTo(bytes, index);//如果内容超出数组长度会抛出异常的
-            return bytes；
+            return bytes;
         }
 
     }
