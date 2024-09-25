@@ -23,6 +23,7 @@
             <RichTextBox x:Name="tb_Send" xml:space="preserve" Height="150" Margin="5"></RichTextBox>
             <!--xml:lang=""指定语言-->
             <Button x:Name="translate" Content="翻译" Click="translate_Click"/>
+            <TextBlock Text="默认编码方式是UTF-8" Margin="3"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Margin="5">
             <TextBlock Text="输出区"></TextBlock>
