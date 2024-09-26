@@ -18,9 +18,9 @@
         <StackPanel Grid.Row="0" Grid.ColumnSpan="2">
             <WrapPanel>
                 <TextBlock Text="IP地址:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5"></TextBlock>
-                <TextBox Width="60" Margin="5"></TextBox>
+                <TextBox x:Name="tb_Ip" Width="60" Margin="5"></TextBox>
                 <TextBlock Text="端口号:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5"></TextBlock>
-                <TextBox Width="60" Text="44818" Margin="5"></TextBox>
+                <TextBox x:Name="tb_Port" Width="60" Text="44818" Margin="5"></TextBox>
             </WrapPanel>
             <WrapPanel>
                 <Button x:Name="btn1" Content="连接" Click="btn1_Click" BorderBrush="LightBlue" Margin="5,6,50,5" Width="50" Height="20"></Button>
