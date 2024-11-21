@@ -37,7 +37,7 @@ namespace OmronCipHsl
                 {
                     bool[] bools = res1.Content;
                 }
-                var res2 = p1.cipClient.ReadBoolArray("LC_Test_BoolArray[0]");
+                var res2 = p1.cipClient.ReadBoolArray("LC_Test_BoolArray[0]");//这个方法的含义还是没有get到
                 if (res2.IsSuccess)
                 {
                     bool[] bools = res2.Content;
@@ -51,6 +51,19 @@ namespace OmronCipHsl
                 if (res4.IsSuccess)
                 {
                     bool[] bools = res4.Content;
+                }
+
+                //读取字符串测试
+                //如果字符串是一个数组ARRAY[0..2] OF String[256]这是PLC那边定义的。代表3个256的String
+
+                OperateResult<string> res5 = p1.cipClient.ReadString("LC_Tes_StringArray[2]", 1, Encoding.ASCII);
+                if (res5.IsSuccess)
+                {
+                    Console.WriteLine("Read [LC_Tes_StringArray[2]] Success, Value: " + res5.Content;
+                }
+                else
+                {
+                    Console.WriteLine("Read [LC_Tes_StringArray[2]] failed: " + res5.Message);
                 }
             }
         }
