@@ -4,16 +4,18 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8F6B396A-55E1-4CB5-93F1-F9FE622F3C9A}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OrmonPLC_Comunication</RootNamespace>
-    <AssemblyName>OrmonPLC_Comunication</AssemblyName>
+    <ProjectGuid>{BEB1FE79-74FA-44B5-802C-DEB716BBAEC1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Test_Console</RootNamespace>
+    <AssemblyName>Test_Console</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +25,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,20 +44,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CIP\Omron_Plc_BZ_CIP.cs" />
-    <Compile Include="CIP\OrmonCip_BKY.cs" />
-    <Compile Include="CIP\OrmonPLC_CIP.cs" />
-    <Compile Include="Fins\OrmonPLC_FinsTCP.cs" />
-    <Compile Include="IReadWriteOrmonPLC.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="通信协议笔记文件夹\通信协议知识点.md" />
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="通信协议笔记文件夹\通信协议知识点.assets\image-20240919113605014.png" />
-    <Content Include="通信协议笔记文件夹\通信协议知识点.assets\image-20240919132533945.png" />
-    <Content Include="通信协议笔记文件夹\通信协议知识点.assets\image-20240919135429952.png" />
+    <ProjectReference Include="..\OrmonPLC_Comunication\OrmonPLC_Comunication.csproj">
+      <Project>{8f6b396a-55e1-4cb5-93f1-f9fe622f3c9a}</Project>
+      <Name>OrmonPLC_Comunication</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

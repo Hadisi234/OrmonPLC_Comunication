@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "编码转换器", "编码�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OmronCipHsl", "OmronCipHsl\OmronCipHsl.csproj", "{4ECF36E2-689D-4558-AFA4-80544DA27C46}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Console", "Test_Console\Test_Console.csproj", "{BEB1FE79-74FA-44B5-802C-DEB716BBAEC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4ECF36E2-689D-4558-AFA4-80544DA27C46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4ECF36E2-689D-4558-AFA4-80544DA27C46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4ECF36E2-689D-4558-AFA4-80544DA27C46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEB1FE79-74FA-44B5-802C-DEB716BBAEC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEB1FE79-74FA-44B5-802C-DEB716BBAEC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEB1FE79-74FA-44B5-802C-DEB716BBAEC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEB1FE79-74FA-44B5-802C-DEB716BBAEC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

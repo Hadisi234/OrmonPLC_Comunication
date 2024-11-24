@@ -83,6 +83,6 @@ namespace OrmonPLC_Comunication.CIP
         /// 状态正常（在报文里低位在前高位在后）
         /// </summary>
         public const int SUCCESS = 0x0000;
-        public const int INVALID_OR_UNSUPPORTED_ENCAPSSULATION_COMMANDS = 
+        public const int INVALID_OR_UNSUPPORTED_ENCAPSSULATION_COMMANDS = 0x0001;
     }
 }
