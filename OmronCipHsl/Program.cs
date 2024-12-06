@@ -11,6 +11,7 @@ namespace OmronCipHsl
     public class Program
     {
         HslCommunication.Profinet.Omron.OmronConnectedCipNet plc = new HslCommunication.Profinet.Omron.OmronConnectedCipNet();
+        HslCommunication.Profinet.Omron.OmronFinsUdp finsUdp = new OmronFinsUdp();
        
         public Program()
         {
@@ -59,7 +60,7 @@ namespace OmronCipHsl
                 OperateResult<string> res5 = p1.cipClient.ReadString("LC_Tes_StringArray[2]", 1, Encoding.ASCII);
                 if (res5.IsSuccess)
                 {
-                    Console.WriteLine("Read [LC_Tes_StringArray[2]] Success, Value: " + res5.Content;
+                    Console.WriteLine("Read [LC_Tes_StringArray[2]] Success, Value: " + res5.Content);
                 }
                 else
                 {
